@@ -16,10 +16,11 @@ app.use(express.json());
 const subscriptionRoutes = require('./routes/subscription.routes');
 const userRoutes = require('./routes/userRoutes');
 app.use(subscriptionRoutes);
-app.use('/api/users', userRoutes); // Corrected line
+app.use('/api/users', userRoutes);
 
 const PORT = process.env.PORT || 10000;
 
 app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}`);
 });
+git add .
