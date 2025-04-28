@@ -18,6 +18,11 @@ const userRoutes = require('./routes/userRoutes');
 app.use(subscriptionRoutes);
 app.use('/api/users', userRoutes);
 
+// New route to handle requests to the root URL ("/")
+app.get('/', (req, res) => {
+  res.send('Welcome to My SaaS App Backend!');
+});
+
 const PORT = process.env.PORT || 10000;
 
 app.listen(PORT, () => {
