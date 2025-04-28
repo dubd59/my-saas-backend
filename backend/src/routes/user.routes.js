@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const userController = require('../controllers/userController');
-const { authenticate } = require('../middleware/authMiddleware');// Corrected import path
+const { authenticate } = require('../middleware/authMiddleware');
 
 // User registration route
 router.post('/register', userController.registerUser);
