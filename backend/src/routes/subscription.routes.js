@@ -1,9 +1,8 @@
 const express = require('express');
 const router = express.Router();
 require('dotenv').config();
-const stripe = require('stripe');
-stripe.secretKey = process.env.STRIPE_SECRET_KEY;
-const User = require('../models/user.model');
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+const User = require('../models/userModel'); // Corrected import path
 const StripePayments = require('../models/StripePayments.model');
 const { authenticate } = require('../middleware/authMiddleware');
 
