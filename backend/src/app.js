@@ -16,7 +16,7 @@ app.use(express.json());
 const subscriptionRoutes = require('./routes/subscription.routes');
 const userRoutes = require('./routes/userRoutes');
 app.use(subscriptionRoutes);
-app.use('/api/users', userRoutes);
+app.use('/api/users', userRoutes); // Corrected line
 
 const PORT = process.env.PORT || 10000;
 
